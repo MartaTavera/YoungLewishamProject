@@ -1,0 +1,314 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Hero Section with Background Image */
+.hero-section {
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -20px; 
+}
+
+.hero-overlay {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 10rem 2rem;
+    text-align: center;
+    height: 400px;
+
+}
+.hero-home {
+     background-image: url('../images/YPL-088.jpg'); 
+     background-position: center 60%;
+}
+.hero-team { 
+    background-image: url('../images/DSC_6100.jpg'); 
+    background-position: center 20%;  /* Show more from the top */
+}  
+.hero-whatwedo{
+    background-image: url('../images/YPL-090_3.jpg');
+    background-position: center 60%;
+}
+.hero-join{
+    background-image: url('../images/YPL-090_3.jpg');
+    background-position: center 85%;
+}
+.hero-support{
+    background-image: url('../images/YPL-088_2.jpg');
+    background-position: center 60%;
+}
+.hero-referrals{
+    background-image: url('../images/ColouredLogo_2.jpg');
+    background-size: cover;
+    background-color: black;
+}
+.hero-section h1 {
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Content Section - adds space after title */
+.content-section {
+    max-width: 1200px;
+    margin: 3rem auto;  /* 3rem top margin creates space */
+    padding: 0 2rem;
+    line-height: 1.8;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding-top: 0px;  /* Accounts for navbar + logo */
+    margin: 0;
+}
+
+
+/* Navigation Bar */
+nav {
+    background-color: black;
+    color: white;
+    padding: 1.35rem 3rem;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    margin: 0;
+    margin-bottom: -4px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+
+
+/* Logo Overlay - On top of fixed navbar */
+.logo-overlay {
+    position: fixed;  /* Changed to fixed so it stays with navbar */
+    left: 2rem;
+    top: 0.5rem;  /* Distance from top */
+    background-color: white;
+    padding: 1rem 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1001;  /* Higher than navbar to stay on top */
+}
+
+.logo-overlay a {
+    display: block;
+    line-height: 0;
+}
+
+.logo-overlay img {
+    height: 100px;  /* Adjust size as needed */
+    width: auto;
+    display: block;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 2rem;
+}
+.team-card {
+    background: #f5f5f5;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+.team-grid .team-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    padding-top: 1rem;
+    border-radius: 12px !important; 
+}
+.team-info {
+    padding: 0.5rem;
+    text-align: center;
+}
+.team-info h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+.team-info p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+
+
+
+/* Footer Main Section */
+.footer-main {
+    background-color: #f5f5f5;
+    padding: 3rem 2rem;
+    border-top: 1px solid #ddd;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+}
+
+.footer-column h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.footer-column h3.orange {
+    color:#333;
+    line-height: 1.3;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: #999;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #333;
+}
+
+/* Newsletter Section */
+.newsletter p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.subscribe-btn {
+    display: inline-block;
+    background-color:black;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+    background-color: #a8a4a2;
+}
+
+/* Logo and Social */
+.logo-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.social-icons a img:hover {
+    opacity: 1;
+}
+
+/* Copyright Section */
+.copyright {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.copyright p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
