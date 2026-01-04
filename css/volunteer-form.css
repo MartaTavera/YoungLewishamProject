@@ -1,0 +1,272 @@
+/* Form Container */
+.form-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Simple Page Header */
+.page-header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: -20px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ... rest of your existing CSS ... */
+
+/* GDPR Notice */
+.gdpr-notice {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 4px solid #4CAF50;
+    border-radius: 4px;
+}
+
+.gdpr-notice h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.gdpr-notice p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-section h2 {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Radio and Checkbox Groups */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Conditional Fields */
+.conditional-field {
+    display: none;
+    margin-top: 15px;
+    padding-left: 20px;
+    border-left: 3px solid #4CAF50;
+}
+
+.conditional-field.show {
+    display: block;
+}
+
+/* Availability Grid */
+.availability-grid {
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.availability-grid table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.availability-grid th,
+.availability-grid td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.availability-grid th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 600;
+}
+
+.availability-grid td {
+    background-color: #f9f9f9;
+}
+
+/* Form Rows */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Referee Boxes */
+.referee-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.referee-box h3 {
+    margin-top: 0;
+    color: #4CAF50;
+    font-size: 1.2rem;
+}
+
+/* Declaration Box */
+.declaration-box {
+    background-color: #fff3cd;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #ffc107;
+}
+
+.declaration-box p {
+    margin: 0 0 15px 0;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.declaration-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.declaration-checkbox input[type="checkbox"] {
+    margin-top: 4px;
+}
+
+.declaration-checkbox label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Required Field Indicator */
+.required {
+    color: red;
+}
+
+/* Emergency Contact Group */
+.emergency-contact-group {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .availability-grid {
+        font-size: 12px;
+    }
+    
+    .availability-grid th,
+    .availability-grid td {
+        padding: 5px;
+        font-size: 11px;
+    }
+}

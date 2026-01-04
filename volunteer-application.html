@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Application - Young Lewisham Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/volunteer-form.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Simple Page Header -->
+    <div class="page-header">
+        <h1>Volunteer Application Form</h1>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="form-container">
+            <!-- GDPR Notice -->
+            <div class="gdpr-notice">
+                <h2>Thank you for your interest in volunteering with the Young Lewisham Project</h2>
+                <p>Volunteers play a vital role in delivering the programmes and activities of the Young Lewisham Project. All volunteer applications are reviewed with consideration to current volunteer opportunities. The information you provide will be stored in confidence under the provisions of the General Data Protection Regulation (GDPR). Your completed form will be held securely and confidentially. Only authorised staff will have access to your information. No information will be shared externally or used for any other purpose than applying to volunteer with us. We will only hold this information for the duration of the time you remain a volunteer with the Young Lewisham Project.</p>
+            </div>
+
+            <!-- Application Form -->
+            <form name="volunteer-application" method="POST" action="/volunteer-thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+                <!-- Hidden fields for Netlify -->
+                <input type="hidden" name="form-name" value="volunteer-application" />
+                <p style="display:none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+
+                <!-- Section 1: Personal Details -->
+                <div class="form-section">
+                    <h2>Personal Details</h2>
+                    
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="title" value="Mr"> Mr</label>
+                            <label><input type="radio" name="title" value="Mrs"> Mrs</label>
+                            <label><input type="radio" name="title" value="Miss"> Miss</label>
+                            <label><input type="radio" name="title" value="Ms"> Ms</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Postal Address</label>
+                        <textarea id="address" name="address" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="home-phone">Telephone (Home)</label>
+                            <input type="tel" id="home-phone" name="home-phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile <span class="required">*</span></label>
+                            <input type="tel" id="mobile" name="mobile" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="emergency-contact-group">
+                        <h3 style="margin-top: 0; font-size: 1.1rem; color: #333;">Emergency Contact Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="emergency-name">Name</label>
+                            <input type="text" id="emergency-name" name="emergency-name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emergency-relationship">Relationship</label>
+                            <input type="text" id="emergency-relationship" name="emergency-relationship">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="emergency-home">Telephone (Home)</label>
+                                <input type="tel" id="emergency-home" name="emergency-home">
+                            </div>
+                            <div class="form-group">
+                                <label for="emergency-mobile">Mobile</label>
+                                <input type="tel" id="emergency-mobile" name="emergency-mobile">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Criminal Conviction Question -->
+                    <div class="form-group" style="margin-top: 25px;">
+                        <label style="margin-bottom: 10px; display: block;">
+                            <strong>Equal Opportunities</strong><br>
+                            <span style="font-weight: normal; font-size: 0.9rem; line-height: 1.6;">
+                                The Young Lewisham Project is committed to equal opportunities and all volunteer recruitment decisions will be based on merit, suitability for the role and experience. The Young Lewisham Project is committed to standards of excellence in Child Protection practices. All volunteers and staff who may have direct contact with young people, will be required to complete an Enhanced DBS check.
+                            </span>
+                        </label>
+                        
+                        <label style="margin-top: 15px; display: block; font-weight: 600;">
+                            Have you ever been convicted of an offense in the United Kingdom or elsewhere? 
+                            <span style="font-weight: normal; font-size: 0.9rem;">(Please note this will not prevent you from volunteering at the YLP.)</span>
+                        </label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="conviction" value="Yes" id="conviction-yes"> Yes</label>
+                            <label><input type="radio" name="conviction" value="No" id="conviction-no"> No</label>
+                        </div>
+                        
+                        <div id="conviction-details" class="conditional-field">
+                            <label for="conviction-details-text">Please provide details:</label>
+                            <textarea id="conviction-details-text" name="conviction-details" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Your Skills and Interests -->
+                <div class="form-section">
+                    <h2>Your Skills and Interests</h2>
+                    
+                    <div class="form-group">
+                        <label>1. Have you ever done any voluntary work before?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="previous-volunteer" value="Yes" id="prev-vol-yes"> Yes</label>
+                            <label><input type="radio" name="previous-volunteer" value="No" id="prev-vol-no"> No</label>
+                        </div>
+                        
+                        <div id="previous-volunteer-details" class="conditional-field">
+                            <label for="previous-volunteer-text">Please tell us a little about the experience:</label>
+                            <textarea id="previous-volunteer-text" name="previous-volunteer-details" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivation">2. Why do you wish to volunteer now? What has motivated you to get in touch with us? <span class="required">*</span></label>
+                        <textarea id="motivation" name="motivation" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="skills">3. Do you have any particular skills or qualities that you could use in your voluntary work?</label>
+                        <textarea id="skills" name="skills" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>4. What kind of voluntary work interests you?</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="work-type" value="Board of Management"> Board of Management</label>
+                            <label><input type="checkbox" name="work-type" value="Project Based Volunteering"> Project Based Volunteering</label>
+                            <label><input type="checkbox" name="work-type" value="Other"> Other</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>5. When are you available for voluntary work?</label>
+                        <div style="margin: 10px 0;">
+                            <label style="font-weight: normal;">
+                                <input type="checkbox" name="availability-flexible" value="Totally Flexible"> 
+                                Totally Flexible
+                            </label>
+                        </div>
+                        
+                        <div class="availability-grid">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                        <th>Thursday</th>
+                                        <th>Friday</th>
+                                        <th>Saturday</th>
+                                        <th>Sunday</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Morning</th>
+                                        <td><input type="checkbox" name="availability-morning-mon" value="Monday Morning"></td>
+                                        <td><input type="checkbox" name="availability-morning-tue" value="Tuesday Morning"></td>
+                                        <td><input type="checkbox" name="availability-morning-wed" value="Wednesday Morning"></td>
+                                        <td><input type="checkbox" name="availability-morning-thu" value="Thursday Morning"></td>
+                                        <td><input type="checkbox" name="availability-morning-fri" value="Friday Morning"></td>
+                                        <td><input type="checkbox" name="availability-morning-sat" value="Saturday Morning"></td>
+                                        <td><input type="checkbox" name="availability-morning-sun" value="Sunday Morning"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Afternoon</th>
+                                        <td><input type="checkbox" name="availability-afternoon-mon" value="Monday Afternoon"></td>
+                                        <td><input type="checkbox" name="availability-afternoon-tue" value="Tuesday Afternoon"></td>
+                                        <td><input type="checkbox" name="availability-afternoon-wed" value="Wednesday Afternoon"></td>
+                                        <td><input type="checkbox" name="availability-afternoon-thu" value="Thursday Afternoon"></td>
+                                        <td><input type="checkbox" name="availability-afternoon-fri" value="Friday Afternoon"></td>
+                                        <td><input type="checkbox" name="availability-afternoon-sat" value="Saturday Afternoon"></td>
+                                        <td><input type="checkbox" name="availability-afternoon-sun" value="Sunday Afternoon"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Evening</th>
+                                        <td><input type="checkbox" name="availability-evening-mon" value="Monday Evening"></td>
+                                        <td><input type="checkbox" name="availability-evening-tue" value="Tuesday Evening"></td>
+                                        <td><input type="checkbox" name="availability-evening-wed" value="Wednesday Evening"></td>
+                                        <td><input type="checkbox" name="availability-evening-thu" value="Thursday Evening"></td>
+                                        <td><input type="checkbox" name="availability-evening-fri" value="Friday Evening"></td>
+                                        <td><input type="checkbox" name="availability-evening-sat" value="Saturday Evening"></td>
+                                        <td><input type="checkbox" name="availability-evening-sun" value="Sunday Evening"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duration">6. How long do you intend to volunteer for?</label>
+                        <input type="text" id="duration" name="duration" placeholder="e.g., 6 months, 1 year, ongoing">
+                    </div>
+                </div>
+
+                <!-- Section 3: References -->
+                <div class="form-section">
+                    <h2>References</h2>
+                    <p>Please provide details of two referees who would be happy for us to contact them in support of your application.</p>
+                    
+                    <!-- Referee 1 -->
+                    <div class="referee-box">
+                        <h3>Referee 1</h3>
+                        
+                        <div class="form-group">
+                            <label for="ref1-name">Name <span class="required">*</span></label>
+                            <input type="text" id="ref1-name" name="ref1-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ref1-relationship">Relationship <span class="required">*</span></label>
+                            <input type="text" id="ref1-relationship" name="ref1-relationship" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ref1-workplace">Place of Work</label>
+                                <input type="text" id="ref1-workplace" name="ref1-workplace">
+                            </div>
+                            <div class="form-group">
+                                <label for="ref1-position">Position</label>
+                                <input type="text" id="ref1-position" name="ref1-position">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ref1-home">Telephone (Home)</label>
+                                <input type="tel" id="ref1-home" name="ref1-home">
+                            </div>
+                            <div class="form-group">
+                                <label for="ref1-mobile">Mobile</label>
+                                <input type="tel" id="ref1-mobile" name="ref1-mobile">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ref1-email">Email</label>
+                            <input type="email" id="ref1-email" name="ref1-email">
+                        </div>
+                    </div>
+
+                    <!-- Referee 2 -->
+                    <div class="referee-box">
+                        <h3>Referee 2</h3>
+                        
+                        <div class="form-group">
+                            <label for="ref2-name">Name</label>
+                            <input type="text" id="ref2-name" name="ref2-name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ref2-relationship">Relationship</label>
+                            <input type="text" id="ref2-relationship" name="ref2-relationship">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ref2-workplace">Place of Work</label>
+                                <input type="text" id="ref2-workplace" name="ref2-workplace">
+                            </div>
+                            <div class="form-group">
+                                <label for="ref2-position">Position</label>
+                                <input type="text" id="ref2-position" name="ref2-position">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ref2-home">Telephone (Home)</label>
+                                <input type="tel" id="ref2-home" name="ref2-home">
+                            </div>
+                            <div class="form-group">
+                                <label for="ref2-mobile">Mobile</label>
+                                <input type="tel" id="ref2-mobile" name="ref2-mobile">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ref2-email">Email</label>
+                            <input type="email" id="ref2-email" name="ref2-email">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Declaration -->
+                <div class="form-section">
+                    <h2>Declaration</h2>
+                    
+                    <div class="declaration-box">
+                        <p>I declare that the information I have provided is true. All my actions as a volunteer will reflect the ethos of the Young Lewisham Project.</p>
+                        
+                        <div class="declaration-checkbox">
+                            <input type="checkbox" id="declaration" name="declaration" value="I agree" required>
+                            <label for="declaration">I agree to this declaration <span class="required">*</span></label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signature">Signature (Type your full name) <span class="required">*</span></label>
+                            <input type="text" id="signature" name="signature" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date <span class="required">*</span></label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div style="text-align: center; margin-top: 30px;">
+                    <button type="submit" class="submit-button">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load components -->
+    <script src="js/components.js"></script>
+    
+    <!-- Form conditional logic -->
+    <script>
+        // Show/hide conviction details
+        document.getElementById('conviction-yes').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('conviction-details').classList.add('show');
+            }
+        });
+        
+        document.getElementById('conviction-no').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('conviction-details').classList.remove('show');
+            }
+        });
+
+        // Show/hide previous volunteer details
+        document.getElementById('prev-vol-yes').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('previous-volunteer-details').classList.add('show');
+            }
+        });
+        
+        document.getElementById('prev-vol-no').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('previous-volunteer-details').classList.remove('show');
+            }
+        });
+
+        // Auto-fill today's date
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('date').value = today;
+        });
+    </script>
+</body>
+</html>
