@@ -16,7 +16,7 @@
 }
 
 .thank-you-box h2 {
-    color: #4CAF50;
+    color: #5387c4;
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -31,14 +31,14 @@
 /* Check Icon */
 .check-icon {
     font-size: 4rem;
-    color: #4CAF50;
+    color: #5387c4;
     margin-bottom: 20px;
 }
 
 /* Home Button */
 .home-button {
     display: inline-block;
-    background-color: #4CAF50;
+    background-color: #5387c4;
     color: white;
     padding: 12px 30px;
     text-decoration: none;
@@ -50,5 +50,5 @@
 }
 
 .home-button:hover {
-    background-color: #45a049;
+    background-color: #5387c4;
 }
