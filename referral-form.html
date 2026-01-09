@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral - Young Lewisham Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/volunteer-form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="page-header">
+        <h1>Referral Form</h1>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="form-container">
+
+            <!-- Referral Form -->
+            <form name="referral-form" method="POST" action="/referral-thank-you.html" data-netlify="true"
+                netlify-honeypot="bot-field">
+                <!-- Hidden fields for Netlify -->
+                <input type="hidden" name="form-name" value="referral-form" />
+                <p style="display:none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+
+                <!-- Section 1: Your Details (Person making referral) -->
+                <div class="form-section">
+                    <h2>Your Details</h2>
+                    <p class="section-description">Information about the person making the referral</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="first-name" name="first-name" placeholder="First name *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="last-name" name="last-name" placeholder="Last name *" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="job-title" name="job-title" placeholder="Job title *" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email address *" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone number *" required>
+                    </div>
+                </div>
+
+                <!-- Section 2: Organisation  Details -->
+                <div class="form-section">
+                    <h2>Organisation Details</h2>
+                    <p class="section-description">Please fill in these details about the organisation that is
+                        making the referral.
+                    </p>
+                    <div class="form-group">
+                        <input type="text" id="organisation" name="organisation-name"
+                            placeholder="Name of organisation*" required>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="org-type" name="org-type" required>
+                            <option value="" disabled selected>Please choose what type of organisation you are referring
+                                from *</option>
+                            <option value="School">School</option>
+                            <option value="Virtual School">Virtual School</option>
+                            <option value="YOS">YOS</option>
+                            <option value="SEN">SEN</option>
+                            <option value="Local Authority">Local Authority</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="address1" name="address1" placeholder="Address line one *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="address2" name="address2" placeholder="Address line 2 *" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="address3" name="address3" placeholder="Address line three *"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="city" name="city" placeholder="City *" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="postcode" name="postcode" placeholder="Postcode *" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="organisation" name="organisation" placeholder="Organisation *"
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="financial-contact" name="financial-contact"
+                            placeholder="Name of financial contact *" required>
+                    </div>
+                    <div class="form-group"><input type="email" id="email" name="email"
+                            placeholder="Email of financial contact *" required></div>
+                </div>
+
+                <!-- Section 3: Consent -->
+                <div class="form-section">
+                    <h2>Contact consent</h2>
+                    <p>We will use your details to contact you regarding questions or information relevant to this
+                        referral.<br>
+
+                        We would also like to use your contact details to communicate with you with news and information
+                        about Young Lewisham Project and ways to support us.<br>
+
+                        If you are happy to hear from us other than for information relevant to this referral, please
+                        choose how you'd like us to contact you:</p>
+                    <div class="form-group">
+                        <label>Preferred method of contact</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="contact-method" value="Email">
+                                Email
+                            </label>
+                            <label>
+                                <input type="checkbox" name="contact-method" value="Phone">
+                                Phone
+                            </label>
+                            <label>
+                                <input type="checkbox" name="contact-method" value="Post">
+                                Post
+                            </label>
+                            <label>
+                                <input type="checkbox" name="contact-method" value="SMS">
+                                SMS
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section 4: young person personal details -->
+                <div class="form-section">
+                    <h2>Personal Details of Referred Young Person</h2>
+                    <p>Please fill in the details of the young person you are referring to the Young Lewisham
+                        Project.<br>
+
+                    <div class="form-group">
+                        <input type="text" id="young-first-name" name="young-first-name"
+                            placeholder="Young person first name *" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="young-last-name" name="young-last-name"
+                            placeholder="Young person last name *" required>
+
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="yp-dob" name="yp-dob" placeholder="Young Person date of birth *"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="young-gender" name="young-gender " required>
+                            <option value="" disabled selected>Young Person gender
+                                *</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Non-ninary">non-binary</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="yp-email" name="yp-email" placeholder="Young Person email address *"
+                            required>
+                    </div>
+                </div>
+                <!-- Section 5: Additional details -->
+                <div class="form-section">
+                    <h2>Additional Details of Young Person</h2>
+                    <p>Please provide additional details about the young person</p>
+
+                    <div class="form-group">
+                        <input type="text" id="yp-org" name="yp-org" placeholder="Name of school or organisation *"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="yp-year" name="yp-year" placeholder="Year group *" required>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="yp-needs" name="yp-needs" required>
+                            <option value="" disabled selected>Risks/needs
+                                *</option>
+                            <option value="Male">Has a disability (please specify)</option>
+                            <option value="Female">Has alcohol misuse issues</option>
+                            <option value="Non-ninary">Has an education, Health and care Plan (EHCP)</option>
+                            <option value="Prefer not to say">Has drug misuse issues</option>
+                            <option value="Has SEN">Has SEN</option>
+                            <option value="Is at risk of school exclusion">Is at risk of school exclusion</option>
+                            <option value="Is at risk of self harm (cutting etc)">Is at risk of self harm (cutting etc)
+                            </option>
+                            <option value="Is known to Children's Services">Is known to Children's Services</option>
+                            <option value="Is looked after by the Local Authority">Is looked after by the Local
+                                Authority
+                            </option>
+                            <option value="Is on a reduced school timetable">Is on a reduced school timetable</option>
+                            <option value="No known riks/needs">No known riks/needs</option>
+                            <option value="Requires transport door to door">Requires transport door to door </option>
+                            <option value="Other ">Other (please specify)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="yp-other-risk" name="yp-other-risk"
+                            placeholder="Other risks or anything else we need to know about*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="yp-medical" name="yp-medical" placeholder="Medical condition(s) *"
+                            required>
+                    </div>
+                    <h3>Transport Requirements</h3>
+                    <p>
+                        The Young Lewisham Project is sited at Kilmorie Road, which is part of the Lewisham School
+                        Street programme. Vehicular traffic is restricted between 8.15 - 9.15am and also 2.45 - 3.45pm,
+                        Mondays to Fridays.
+
+                        If door to door transport is a requirement for the young person, this is the responsibility of
+                        the referring agency. Details are available here: <a
+                            href="https://lewisham.gov.uk/myservices/parking/schoolstreets/exemptpersons"
+                            target="_blank" rel="noopener noreferrer">Lewisham Council - School Streets</a></p>
+                </div>
+
+                <!-- Section 6: Background to the Referral -->
+                <div class="form-section">
+                    <h2>Background to the Referral</h2>
+                    <p>Briefly, why is this young person being referred to the YLP? What are their main
+                        difficulties, challenges and/or risks? </p>
+                    <div class="form-group">
+                        <input type="text" id="ref-reason" name="ref-reason" placeholder="Reason for referral *"
+                            required>
+                    </div>
+                    <p>Please provide a figure for the total number of mainstream secondary and/or alternative
+                        provision schools attended by this young person since the age of 11.</p>
+                    <div class="form-group">
+                        <input type="text" id="schools-attended" name="schools-attended"
+                            placeholder="No. of schools attended *" required>
+                    </div>
+                    <p>Is the young person currently NEET (not in education, employment or training)?</p>
+                    <div class="form-group">
+                        <select id="yp-neet" name="yp-neet" required>
+                            <option value="" disabled selected>Current NEET * </option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <p>Is the young person known to the police and/or do they have a formal record of criminal
+                        activity?</p>
+                    <div class="form-group">
+                        <select id="yp-offender" name="yp-offender" required>
+                            <option value="" disabled selected>Involment with Youth Justice Service * </option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+
+                    <p>At their referring school, what was the young person's attendance percentage? (Last
+                        academic year or term)</p>
+                    <div class="form-group">
+                        <input type="text" id="school-attendance" name="school-attendance" placeholder="attendance % *"
+                            required>
+                    </div>
+                    <div class="referee-box">
+                        <h3>Current wellbeing assesment</h3>
+                        <br>
+                        <div class="form-group">
+                            <strong>Self esteem - referral * </strong><br>
+                            As of now, how would you rate the young person’s self-esteem?
+                            </p>
+                            <div class="wellbeing-container">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <script src="js/referral.js"></script>
+                        </div>
+                        <div class="form-group">
+                            <strong>Positive communication - referral *</strong><br>
+                            As of now, how would you rate the young person’s ability to communicate positively with
+                            others?
+                        </div>
+
+                        <div class="form-group">
+                            <strong>Physical health - referral *</strong><br>
+                            As of now, how would you rate the young person’s physical health?
+                        </div>
+
+                        <div class="form-group">
+                            <strong>Mental Health - referral *</strong><br>
+                            As of now, how would you rate the young person’s mental health?
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Section 7: Parent / Carer Information-->
+                <div class="form-section">
+                    <h2>Parent / Carer Information</h2>
+                    <div class="form-group">
+                        <input type="text" id="yp-carer" name="yp-carer"
+                            placeholder="Young Person Parent/ Carer full name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="carer-rel" name="carer-rel" placeholder="Relationship to Young Person *"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder=" Parent/Carer mobile phone number *"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Parent/Carer email address *" required>
+                    </div>
+                </div>
+                <!-- Social Worker Details-->
+                <div class="form-section">
+                    <h2>If Applicable - Social Worker Details</h2>
+                    <div class="form-group">
+                        <input type="text" id="social-worker" name="social-worker-"
+                            placeholder="Social worker full name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="social-worker" name="social-worker"
+                            placeholder="Social worker team/ local authority *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Social worker mobile phone number *"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Psocial Worker email address *"
+                            required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p>If you have any questions, comments, suggestions or concerns, please reach out to our friendly
+                        team at
+                        info@younglewisham.org.uk.</p>
+                </div>
+
+        </div>
+
+        <!-- Submit Button -->
+        <div style="text-align: center; margin-top: 30px;">
+            <button type="submit" class="submit-button">Submit Application</button>
+            <br>
+        </div>
+        </form>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load components -->
+    <script src="js/components.js"></script>
+
+    <!-- Form conditional logic -->
+
+</body>
+
+</html>

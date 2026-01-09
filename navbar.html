@@ -4,9 +4,14 @@
            
             <img src="images/YLP-Logo.jpg" alt=" Young Lewisham Project Logo">
         </a>
-
     </div>
-    <ul class="nav-links">
+
+     <div class="burger-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="whatwedo.html">What we do</a></li>
         <li><a href="whoweare.html">Meet the team</a></li>
@@ -15,3 +20,18 @@
         <li><a href="referrals.html">Referrals</a></li>
     </ul>
 </nav>
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        const burger = document.querySelector('.burger-menu');
+        navLinks.classList.toggle('active');
+        burger.classList.toggle('active');
+    }
+    
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navLinks').classList.remove('active');
+            document.querySelector('.burger-menu').classList.remove('active');
+        });
+    });
+    </script>

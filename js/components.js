@@ -20,3 +20,35 @@ fetch('footer.html')
     .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;
     });
+
+// Burger menu functions
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const burger = document.querySelector('.burger-menu');
+    if (navLinks && burger) {
+        navLinks.classList.toggle('active');
+        burger.classList.toggle('active');
+    }
+}
+
+// Make toggleMenu available globally
+window.toggleMenu = toggleMenu;
+
+// Close menu when clicking a link
+document.addEventListener('DOMContentLoaded', function() {
+    // Wait a bit for navbar to load
+    setTimeout(() => {
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('navLinks');
+                const burger = document.querySelector('.burger-menu');
+                if (navLinks && burger) {
+                    navLinks.classList.remove('active');
+                    burger.classList.remove('active');
+                }
+            });
+        });
+    }, 100);
+});
+
+// Star rating 
