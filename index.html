@@ -13,8 +13,6 @@
     <!-- Navigation Bar (same on all pages) -->
     <div id="navbar-placeholder"></div>
 
-
-
     <!-- Hero Section with Background -->
     <section class="hero-section">
         <div class="hero-overlay hero-home">
@@ -22,41 +20,60 @@
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- Main Content with Notice Board Sidebar -->
     <main>
-        <section class="content-section">
-            <p>The Young Lewisham Project is an alternative provision based in Forest Hill in the borough of Lewisham,
-                South East London. We offer a range of supportive, alternative, vocational programmes to young people
-                who are perhaps not reaching their full potential in mainstream education in order to help maximise
-                their chances of becoming valued members of our ever-evolving society.</p>
-                <br>
-                <p>Take a virtual tour of our facilities to see where young people learn and grow.</p>
-        </section>
-    
-       
-       
-            <div class="video-YLPtour" onclick="openModal('RqDX7BlOGXA')">
-                <img src="https://img.youtube.com/vi/RqDX7BlOGXA/maxresdefault.jpg" alt="Young Lewisham Project">
-                <div class="video-title">YLP virtual tour</div>
-            </div>
-        
-        <section class="content-section">
-            <h1>Our Story</h1>
-            <p>
-                In 1974 a group of Lewisham residents were frustrated by the fact that a few of the young people in
-                their neighbourhood were becoming involved in anti-social behaviour and getting into trouble with the
-                police; stealing motorbikes was a big problem.
-
-                The residents knew that this behaviour was largely due to local young people having nothing constructive
-                to do in their spare time.
-
-                One of the local residents came across a project in Birmingham that had set up a workshop for young
-                people so that, instead of stealing motorbikes, they would learn to maintain, service and rebuild them.
-                Inspired by this, they turned an old confectionary factory into a small workshop and encouraged local
-                young people to come along and learn the basics of mechanics and Young Lewisham Project was born.</p>
-
+        <div class="main-wrapper">
+            <!-- Left Column: Main Content -->
+            <div class="main-content">
+                <section class="content-section">
+                    <p>The Young Lewisham Project is an alternative provision based in Forest Hill in the borough of Lewisham,
+                        South East London. We offer a range of supportive, alternative, vocational programmes to young people
+                        who are perhaps not reaching their full potential in mainstream education in order to help maximise
+                        their chances of becoming valued members of our ever-evolving society.</p>
+                        <br>
+                        <p>Take a virtual tour of our facilities to see where young people learn and grow.</p>
+                </section>
+            
+                <div class="video-YLPtour" onclick="openModal('RqDX7BlOGXA')">
+                    <img src="https://img.youtube.com/vi/RqDX7BlOGXA/maxresdefault.jpg" alt="Young Lewisham Project">
+                    <div class="video-title">YLP virtual tour</div>
+                </div>
                 
-        </section>
+                <section class="content-section">
+                    <h1>Our Story</h1>
+                    <p>
+                        In 1974 a group of Lewisham residents were frustrated by the fact that a few of the young people in
+                        their neighbourhood were becoming involved in anti-social behaviour and getting into trouble with the
+                        police; stealing motorbikes was a big problem.
+
+                        The residents knew that this behaviour was largely due to local young people having nothing constructive
+                        to do in their spare time.
+
+                        One of the local residents came across a project in Birmingham that had set up a workshop for young
+                        people so that, instead of stealing motorbikes, they would learn to maintain, service and rebuild them.
+                        Inspired by this, they turned an old confectionary factory into a small workshop and encouraged local
+                        young people to come along and learn the basics of mechanics and Young Lewisham Project was born.</p>
+                </section>
+            </div>
+
+            <!-- Right Column: Notice Board Sidebar -->
+            <aside class="notice-board">
+                <h2>Notice Board</h2>
+                <div class="notice-item">
+                    <h3>Workshop Schedule</h3>
+                    <p>Check back soon for updated workshop times and availability.</p>
+                </div>
+                <div class="notice-item">
+                    <h3>Upcoming Events</h3>
+                    <p>Visit our <a href="events.html">events page</a> for the latest updates.</p>
+                </div>
+                <div class="notice-item">
+                    <h3>Join Us</h3>
+                    <p>Interested in our programmes? <a href="join.html">Learn how to apply</a>.</p>
+                </div>
+                
+            </aside>
+        </div>
 
         <div id="videoModal" class="modal" onclick="closeModal(event)">
             <div class="modal-content">
@@ -66,7 +83,6 @@
                 </iframe>
             </div>
         </div>
-
 
         <script>
             function openModal(videoId) {

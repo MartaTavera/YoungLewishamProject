@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -87,11 +87,79 @@
     -webkit-text-stroke: 1px black;
 }
 
+/* Main Content Wrapper - Two Column Layout */
+.main-wrapper {
+    display: flex;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.main-content {
+    flex: 2;
+    min-width: 0;
+}
+
+/* Notice Board Sidebar */
+.notice-board {
+    flex: 1;
+    background-color: #f0f0f0;
+    border-left: 4px solid #333333;
+    border: 2px solid #5387c4;
+    padding: 2rem;
+    border-radius: 8px;
+    height: fit-content;
+    position: sticky;
+    top: 150px;
+}
+
+.notice-board h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+.notice-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.notice-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.notice-item h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.notice-item p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.notice-item a {
+    color: #5387c4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.notice-item a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
 /* Content Section - adds space after title */
 .content-section {
-    max-width: 1200px;
-    margin: 0rem auto 3rem auto;  /* 3rem top margin creates space */
-    padding: 0 2rem;
+    margin: 0rem 0 3rem 0;
     line-height: 1.8;
 }
 
@@ -298,6 +366,17 @@ nav {
     
     .info-card.reverse .card-content {
         direction: ltr;
+    }
+
+    /* Stack notice board below content on mobile */
+    .main-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .notice-board {
+        position: static;
+        top: auto;
     }
 }
 
