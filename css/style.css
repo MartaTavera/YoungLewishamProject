@@ -104,11 +104,10 @@
 /* Notice Board Sidebar */
 .notice-board {
     flex: 1;
-    background-color: #f0f0f0;
-    border-left: 4px solid #333333;
-    border: 2px solid #5387c4;
+    background-color:#f4e7f5 ;
     padding: 2rem;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     height: fit-content;
     position: sticky;
     top: 150px;
@@ -116,9 +115,9 @@
 
 .notice-board h2 {
     font-size: 1.5rem;
-    color: #333;
+    color: #970497;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #970497;
     padding-bottom: 0.5rem;
 }
 
@@ -136,7 +135,7 @@
 
 .notice-item h3 {
     font-size: 1.1rem;
-    color: #333;
+    color: #970497;
     margin-bottom: 0.5rem;
 }
 
