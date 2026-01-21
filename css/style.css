@@ -159,8 +159,9 @@
 
 /* Content Section - adds space after title */
 .content-section {
-    margin: 0rem 0 3rem 0;
-    line-height: 1.8;
+    max-width: 1200px;
+    margin: 0rem auto 3rem auto;  /* 3rem top margin creates space */
+    padding: 0 2rem;
 }
 
 .content-section p {
@@ -510,7 +511,6 @@ nav {
     cursor: pointer;
     border-radius: 8px;
     overflow: hidden;
-    border: solid red;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     grid-column: span 2;
@@ -726,24 +726,24 @@ nav {
       gap: 1rem; /* Reduce gap between items */
     }
     .nav-links a {
-      font-size: 1.2rem; /* Slightly smaller font */
-      padding: 0.4rem 0.6rem; /* Smaller padding */
+      font-size: 1.2rem; 
+      padding: 0.4rem 0.6rem; 
     }
     .logo-overlay img {
-        height: 80px;  /* Adjust size as needed */
+        height: 80px; 
         width: auto;
     }
   }
   @media (max-width: 900px) {
     .nav-links {
-      gap: 0.5rem; /* Reduce gap between items */
+      gap: 0.5rem; 
     }
     .nav-links a {
-      font-size: 1.1rem; /* Slightly smaller font */
-      padding: 0.4rem 0.6rem; /* Smaller padding */
+      font-size: 1.1rem;
+      padding: 0.4rem 0.6rem;
     }
     .logo-overlay img {
-        height: 60px;  /* Adjust size as needed */
+        height: 60px;  
         width: auto;
     }
   }
@@ -751,12 +751,12 @@ nav {
   /* Small screens */
 @media (max-width: 768px) {
     .nav-links {
-      gap: 0.5rem; /* Further reduce gap */
+      gap: 0.5rem; 
     }
     
     .nav-links a {
-      font-size: 1rem; /* Smaller font */
-      padding: 0.3rem 0.5rem; /* Smaller padding */
+      font-size: 1rem; 
+      padding: 0.3rem 0.5rem;
     }
   }
   
