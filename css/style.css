@@ -357,6 +357,190 @@ nav {
 .info-card.reverse .card-text {
     direction: ltr;
 }
+.onboarding-wrapper {
+    margin: 6rem auto;
+    padding: 0;
+}
+
+.onboarding-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding:2rem;
+}
+
+.onboarding-container h1 {
+    color: #5387c4;
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.flowchart {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.step-icon-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 1.5rem;
+}
+
+.step-icon {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: solid 4px white;
+    background: linear-gradient(135deg, #5387c4 0%, #99c5f7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(107, 181, 232, 0.25);
+    transition: all 0.3s ease;
+}
+
+.step-box:hover {
+    transform: translateY(-8px);
+}
+.step:hover .step-icon {
+    transform: translateY(-8px);
+   
+}
+
+
+.step-number {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 44px;
+    height: 44px;
+    background: white;
+    border: solid 3px #5387c4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5387c4;
+    font-weight: 700;
+    font-size: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.step-title {
+    color: #5387c4;
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 3rem;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.step-box {
+    margin-top: -85px;
+    max-width: 80%;
+    position: relative;
+    z-index: 1;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    border-right: 4px solid #5387c4;
+    border-bottom: 4px solid #5387c4;
+    transition: all 0.3s ease;
+}
+.step-box p {
+    margin: 0;
+}
+
+
+/* SVG Icons */
+svg {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+
+.referral-cta {
+    margin: 4rem auto;
+    padding: 2rem;
+   
+    text-align: center;
+}
+
+.referral-cta p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.referral-cta a {
+    display: inline-block;
+    background-color: #5387c4;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.referral-cta a:hover {
+    background-color: #3d5fa8;
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .flowchart {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .step-icon-wrapper {
+        width: 140px;
+        height: 140px;
+    }
+
+    .step-icon {
+        width: 140px;
+        height: 140px;
+    }
+
+    svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .step-description {
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
 
 
 /* Mobile responsive */
