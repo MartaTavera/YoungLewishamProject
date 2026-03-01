@@ -50,6 +50,10 @@
     background-image: url('../images/YPL-088_2.jpg');
     background-position: center 60%;
 }
+.hero-hire{
+    background-image: url('../images/Kitchen3h.jpg');
+    background-position: center 60%;
+}
 .hero-referrals{
     background-image: url('../images/ColouredLogo_2.jpg');
     background-size: cover;
@@ -157,11 +161,11 @@
     text-decoration: underline;
 }
 
-/* Content Section - adds space after title */
+/* Content Section - add space after title */
 .content-section {
     max-width: 1200px;
     margin: 0rem auto 3rem auto;  /* 3rem top margin creates space */
-    padding: 0 2rem;
+    padding: 0 3rem;
 }
 
 .content-section p {
@@ -172,7 +176,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding-top: 0px;  /* Accounts for navbar + logo */
+    padding-top: 0px;  /* Account for navbar + logo */
     margin: 0;
 }
 
@@ -401,13 +405,20 @@ nav {
     height: 160px;
     margin-bottom: 1.5rem;
 }
+.step-icon img {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: center;
+}
 
 .step-icon {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    border: solid 4px white;
-    background: linear-gradient(135deg, #5387c4 0%, #99c5f7 100%);
+    border: solid 4px #5387c4;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -777,15 +788,15 @@ svg {
     cursor: pointer;
     gap: 6px;
     position: fixed;
-    right: 2rem;
-    top: 1.8rem;
+    right: 1rem;
+    top: 1.0rem;
     z-index: 1002;
     padding: 10px;
 }
 
 .burger-menu span {
-    width: 28px;
-    height: 3px;
+    width: 18px;
+    height: 2px;
     background-color: white;
     transition: all 0.3s ease;
     border-radius: 3px;
@@ -824,7 +835,7 @@ svg {
     
     /* Nav styles for mobile */
     nav {
-        padding: 1rem 1rem;
+        padding: 2rem 2rem;
     }
     
     /* Hide nav links by default on mobile */
@@ -832,8 +843,8 @@ svg {
         position: fixed;
         right: -100%;
         top: 0;
-        height: 100vh;
-        width: 75%;
+        height: 40vh;
+        width: 55%;
         background-color: rgba(0, 0, 0, 0.98);
         flex-direction: column;
         justify-content: flex-start;
