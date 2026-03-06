@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form - Young Lewisham Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/volunteer-form.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="page-header">
+        <h1>Booking Form</h1>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="form-container">
+            <h1 class="form-title">Venue booking form</h1>
+            
+            <div class="form-section">
+                <h2 class="section-header">Booking Details</h2>
+                
+                <div class="form-group">
+                    <label class="field-label">Title</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="title" value="Mr">
+                            <span>Mr</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="title" value="Mrs">
+                            <span>Mrs</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="title" value="Miss">
+                            <span>Miss</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="title" value="Ms">
+                            <span>Ms</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="full-name" class="field-label">Full Name <span class="required">*</span></label>
+                    <input type="text" id="full-name" name="fullName" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="field-label">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone" class="field-label">Telephone (Home)</label>
+                        <input type="tel" id="phone" name="phone" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile" class="field-label">Mobile <span class="required">*</span></label>
+                        <input type="tel" id="mobile" name="mobile" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="event-date" class="field-label">Date of Event <span class="required">*</span></label>
+                    <input type="date" id="event-date" name="eventDate" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="event-type" class="field-label">Event Type <span class="required">*</span></label>
+                    <input type="text" id="event-type" name="eventType" class="form-input" placeholder="e.g., Wedding, Conference, Party" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="event-details" class="field-label">Event Details <span class="required">*</span></label>
+                    <textarea id="event-details" name="eventDetails" class="form-textarea" rows="4" placeholder="Please describe your event" required></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button">Submit Booking Request</button>
+        </div>
+    </form>
+</body>
+</html>
+           
