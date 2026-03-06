@@ -1,3 +1,47 @@
+/* Policies List */
+.policies-list {
+    max-width: 960px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.policy-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.policy-row:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.policy-row:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.policy-name {
+    font-size: 1rem;
+    color: #333;
+}
+
+.policy-download {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #5387c4; /* pink/magenta to match screenshot */
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.policy-download:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
 /* Policies Container */
 .page-header {
     background-color: #5387c4;
@@ -70,7 +114,29 @@
 .policy-link:hover {
     background-color: #4070a8;
 }
+.policy-list {
+    max-width: 960px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
 
+.policy-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    border: 1px solid #5387c4;
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+
+.policy-row:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.policy-row:nth-child(even) {
+    background-color: #ffffff;
+}
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .policies-container {
