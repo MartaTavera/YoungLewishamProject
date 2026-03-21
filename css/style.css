@@ -34,7 +34,7 @@ nav {
     display: flex;
     gap: 0.8rem;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .nav-links a {
@@ -75,12 +75,13 @@ nav {
 /* Social Icons - Desktop Sidebar */
 .social-icons {
     position: fixed;
-    transform: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    left: 12rem;
+    display: flex;
+    flex-direction: row;
     
+    left: 11rem;
+    top: 0.5rem;
+    align-items: center;
+    z-index: 999;    
 }
 
 .social-link {
@@ -95,7 +96,11 @@ nav {
     
     font-size: 1rem;
 }
-
+.social-link svg {
+    width: 0.9rem !important;
+    height: 0.9rem !important;
+    filter: none;
+}
 .social-link:hover {
     transform: scale(1.2);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -598,6 +603,23 @@ svg {
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
+.submit-button {
+    background-color: #5387c4;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.submit-button:hover {
+    background-color: #5387c4;
+}
 .referral-cta {
     margin: 4rem auto;
     padding: 2rem;
@@ -692,6 +714,87 @@ svg {
 
 .subscribe-btn:hover {
     background-color: #a8a4a2;
+}
+#newsletter-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+}
+
+#newsletter-modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.closemodal-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.closemodal-btn:hover {
+    color: #000;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.modal-content > p {
+    color: red;
+    margin-bottom: 20px;
+}
+
+#mc_embed_signup {
+    background: transparent !important;
+    padding: 0 !important;
+    width: auto !important;
+}
+
+#mc_embed_signup input[type="email"],
+#mc_embed_signup input[type="text"] {
+    width: 100% !important;
+    margin-bottom: 15px !important;
+}
+
+#mc_embed_signup .button {
+    width: 100% !important;
+    background-color: #000 !important;
+    cursor: pointer !important;
+}
+
+#mc_embed_signup .button:hover {
+    background-color: #333 !important;
 }
 
 .logo-social {

@@ -1,9 +1,11 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+
 <footer class="footer-main">
     <div class="footer-content">
         <div class="footer-column">
             <h3>Volunteers</h3>
             <ul>
-                
                 <li><a href="join.html">Volunteer Opportunities</a></li>
                 <li><a href="volunteer-application.html">Volunteer application</a></li>
             </ul>
@@ -17,7 +19,7 @@
         </div>
 
         <div class="footer-column">
-            <h3>Events </h3>
+            <h3>Events</h3>
             <ul>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="pastevents.html">Past Events</a></li>
@@ -30,23 +32,104 @@
             <ul>
                 <li><a href="contactUs.html">Contact Us</a></li>
                 <li><a href="sponsor.html">Our Funders</a></li>
-                <li><a href="#">Donate</a></li>
+                <li><a href="donations.html">Donate</a></li>
                 <li><a href="policies.html">Polices</a></li>
             </ul>
         </div>
 
         <div class="footer-column newsletter">
-            <h3 class="orange">Newsletter<br>Sing Up</h3>
+            <h3 class="orange">Newsletter<br>Sign Up</h3>
             <p>Keep up to date with what is going on by signing up to our newsletter.</p>
-            <a href="#" class="subscribe-btn">Subscribe</a>
 
-            
+            <button class="subscribe-btn" id="openModalBtn">Subscribe</button>
+
+            <!-- Newsletter Modal -->
+            <div id="newsletter-modal">
+                <div class="modal-content">
+                    <button class="closemodal-btn" id="closeModalBtn">&times;</button>
+
+                    <h2>Newsletter Sign Up</h2>
+                    <p>Keep up to date with what is going on by signing up to our newsletter.</p>
+
+                    <!-- Mailchimp Form -->
+                    <div id="mc_embed_shell">
+                        <div id="mc_embed_signup">
+                            <form action="https://younglewisham.us4.list-manage.com/subscribe/post?u=6bbac1223ea780065501cd566&amp;id=18fcbd5602&amp;f_id=00521deaf0"
+                                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                class="validate" target="_blank">
+                                <div id="mc_embed_signup_scroll">
+                                    <h2>Subscribe</h2>
+                                    <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+
+                                    <div class="mc-field-group">
+                                        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required value="">
+                                    </div>
+
+                                    <div class="mc-field-group">
+                                        <label for="mce-FNAME">First Name</label>
+                                        <input type="text" name="FNAME" class="text" id="mce-FNAME" value="">
+                                    </div>
+
+                                    <div class="mc-field-group">
+                                        <label for="mce-LNAME">Last Name</label>
+                                        <input type="text" name="LNAME" class="text" id="mce-LNAME" value="">
+                                    </div>
+
+                                    <div class="mc-field-group size1of2">
+                                        <label for="mce-BIRTHDAY-month">Birthday</label>
+                                        <div class="datefield">
+                                            <span class="subfield monthfield">
+                                                <input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="MM" 
+                                                    size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month" value="">
+                                            </span> /
+                                            <span class="subfield dayfield">
+                                                <input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="DD" 
+                                                    size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day" value="">
+                                            </span>
+                                            <span class="small-meta nowrap">( mm / dd )</span>
+                                        </div>
+                                    </div>
+
+                                    <div id="mce-responses" class="clear foot">
+                                        <div class="response" id="mce-error-response" style="display: none;"></div>
+                                        <div class="response" id="mce-success-response" style="display: none;"></div>
+                                    </div>
+
+                                    <!-- Honeypot field (hidden from users) -->
+                                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                        <input type="text" name="b_6bbac1223ea780065501cd566_18fcbd5602" tabindex="-1" value="">
+                                    </div>
+
+                                    <div class="optionalParent">
+                                        <div class="clear foot">
+                                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Mailchimp Validation Script -->
+                    <script type="text/javascript" src="https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+                    <script type="text/javascript">
+                        (function ($) {
+                            window.fnames = new Array();
+                            window.ftypes = new Array();
+                            fnames[0] = 'EMAIL'; ftypes[0] = 'email';
+                            fnames[1] = 'FNAME'; ftypes[1] = 'text';
+                            fnames[2] = 'LNAME'; ftypes[2] = 'text';
+                            fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday';
+                        }(jQuery));
+                        var $mcj = jQuery.noConflict(true);
+                    </script>
+                </div>
+            </div>
         </div>
-
-       
     </div>
 </footer>
 
 <div class="copyright">
-    <p>&copy; 2025  All rights reserved.</p>
+    <p>&copy; 2025 All rights reserved.</p>
 </div>
