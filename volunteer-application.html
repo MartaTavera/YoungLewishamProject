@@ -12,7 +12,7 @@
     <div id="navbar-placeholder"></div>
 
     <div class="page-header">
-        <h1>Volunteer application Form</h1>
+        <h1>Volunteer Application Form</h1>
     </div>
 
     <!-- Main Content -->
@@ -24,10 +24,12 @@
                 <p>Volunteers play a vital role in delivering the programmes and activities of the Young Lewisham Project. All volunteer applications are reviewed with consideration to current volunteer opportunities. The information you provide will be stored in confidence under the provisions of the General Data Protection Regulation (GDPR). Your completed form will be held securely and confidentially. Only authorised staff will have access to your information. No information will be shared externally or used for any other purpose than applying to volunteer with us. We will only hold this information for the duration of the time you remain a volunteer with the Young Lewisham Project.</p>
             </div>
 
-            <!-- Application Form -->
+            <!-- Application Form with Netlify Setup -->
             <form name="volunteer-application" method="POST" action="/volunteer-thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
                 <!-- Hidden fields for Netlify -->
                 <input type="hidden" name="form-name" value="volunteer-application" />
+                
+                <!-- Honeypot field (hidden from users) -->
                 <p style="display:none;">
                     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                 </p>
