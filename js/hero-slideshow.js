@@ -1,7 +1,7 @@
 {
 const container = document.querySelector('.hero-hire');
 const slides = Array.from(document.querySelectorAll('.hero-slideshow .slide'));
-const interval = 5000; // ms between transitions
+const interval = 4000; // ms between transitions
 let current = 0;
 let timer = null;
 

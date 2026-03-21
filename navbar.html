@@ -1,39 +1,76 @@
-<nav>
-    <div class="logo-overlay">
-        <a href="index.html">
-           
-            <img src="images/YLP-Logo.jpg" alt=" Young Lewisham Project Logo">
-        </a>
-    </div>
+<!-- Font Awesome CDN - Add this to your <head> section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-     <div class="burger-menu" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="whatwedo.html">What we do</a></li>
-        <li><a href="whoweare.html">Meet the team</a></li>
-        <li><a href="join.html" class="active">Join us</a></li>
-        <li><a href="support.html">Support us</a></li>
-        <li><a href="hire.html">Hire Our Venue</a></li>
-        <li><a href="referrals.html">Referrals</a></li>
-
-    </ul>
-</nav>
-<script>
-    function toggleMenu() {
-        const navLinks = document.getElementById('navLinks');
-        const burger = document.querySelector('.burger-menu');
-        navLinks.classList.toggle('active');
-        burger.classList.toggle('active');
-    }
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo-overlay">
+            <a href="index.html">
+                <img src="images/YLP-Logo.jpg" alt="Young Lewisham Project Logo">
+            </a>
+        </div>
     
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById('navLinks').classList.remove('active');
-            document.querySelector('.burger-menu').classList.remove('active');
+        <!-- Social Icons - Desktop sidebar + Mobile navbar -->
+        <div class="social-icons">
+            <!-- X/Twitter -->
+            <a href="https://x.com/younglewisham" class="social-link twitter" aria-label="Follow us on X"
+                target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    style="width: 1.3rem; height: 1.3rem;">
+                    <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.165-6.75-5.868 6.75h-3.308l7.732-8.835L2.882 2.25h6.6l4.759 6.318L18.244 2.25zM17.41 20.452h1.828L5.887 4.15H4.013l13.397 16.302z"
+                        fill="white" />
+                </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/younglewishamproject/" class="social-link instagram"
+                aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/YoungLewishamProject/?locale=en_GB" class="social-link facebook"
+                aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://uk.linkedin.com/company/young-lewisham-project" class="social-link linkedin"
+                aria-label="Follow us on LinkedIn" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+      
+    
+        <div class="burger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="whatwedo.html">What we do</a></li>
+            <li><a href="whoweare.html">Meet the team</a></li>
+            <li><a href="join.html" class="active">Join us</a></li>
+            <li><a href="support.html">Support us</a></li>
+            <li><a href="hire.html">Hire Our Venue</a></li>
+            <li><a href="referrals.html">Referrals</a></li>
+        </ul>
+    </nav>
+    
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const burger = document.querySelector('.burger-menu');
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        }
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+                document.querySelector('.burger-menu').classList.remove('active');
+            });
         });
-    });
     </script>
