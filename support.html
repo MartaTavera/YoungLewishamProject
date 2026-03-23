@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support us</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/join.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Navigation Bar (same on all pages) -->
     <div id="navbar-placeholder"></div>
 
-     <!-- Hero Section with Background -->
-     <section class="hero-section">
+    <!-- Hero Section with Background -->
+    <section class="hero-section">
         <div class="hero-overlay hero-support">
             <h1>Support us</h1>
         </div>
     </section>
     <!-- Main Content -->
     <main>
-        <section class="content-section">
-          <p>
-            The Young Lewisham Project is a registered charity that receives no statutory government funding, we rely heavily on grant and foundation funding to subsidise our projects and activities to make them accessible for all.   We are constantly looking for ways to raise funds to ensure the magnificent work we do and the help we give to young people can continue.</p>
-            <br \>
-            <p>You can support us in a number of ways - make a donation, volunteer your time, or even give us your old furniture, bikes or unwanted wood.</p>
+
+        <div class="join-container">
+            <!-- Left Column - Text -->
+            <div>
+                <p>The Young Lewisham Project is a registered charity that receives no statutory government funding, we
+                    rely heavily on grant and foundation funding to subsidise our projects and activities to make them
+                    accessible for all. We are constantly looking for ways to raise funds to ensure the magnificent work
+                    we do and the help we give to young people can continue.</p>
+                    <br />
+                <p>You can support us in a number of ways - make a donation, volunteer your time, or even give us your
+                    old furniture, bikes or unwanted wood.</p>
+            </div>
+
+            <!-- Right Column - Donation Box -->
+            <div class="join-box">
+                <h2>Make a Donation</h2>
+
+                <div style="display: flex; gap: 4rem; align-items: center; justify-content: center;">
+                    <!-- QR Code -->
+                    <div>
+                        <img src="/images/justgiving-qr-code.png" alt="JustGiving QR Code"
+                            style="width: 180px; height: 180px; border-radius: 6px;">
+                    </div>
+
+                    <!-- Donate Button -->
+                    <div>
+                        <a href="https://www.justgiving.com/crowdfunding/younglewishamproject?utm_medium=qrcode&utm_source=offline&utm_content=brandedqr" class="apply-button" target="_blank"
+                            rel="noopener noreferrer">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-            <img src="/images/justgiving-qr-code.png" alt="Donate via QR code" style="width: 200px;">
-        </section>
+       
 
-        </main>
-        
+    </main>
+
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
     <!-- Load componets -->
     <script src="js/components.js"></script>
-       
+
 </body>

@@ -1,7 +1,7 @@
 /* Join Container - Two Column Layout */
 .join-container {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 1px auto 40px;
     padding: 0 20px;
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
@@ -27,7 +27,7 @@
 .join-box > p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555;
+    color: #333;
     margin-bottom: 20px;
 }
 .join-box a{
