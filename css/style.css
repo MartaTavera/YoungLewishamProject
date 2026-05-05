@@ -299,6 +299,16 @@
        color: #333;
    }
 
+   .content-section a {
+       color: #5387c4;
+       text-decoration: none;
+       transition: color 0.3s;
+   }
+   .content-section  a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
    /* Notice Board Sidebar */
    .notice-board {
        flex: 1;
@@ -983,8 +993,9 @@
            width: 2.2rem;
            height: 2.2rem;
        }
-    }
-       @media (max-width: 768px) {
+   }
+
+   @media (max-width: 768px) {
        .nav-links {
            gap: 0.15rem;
        }
@@ -994,19 +1005,20 @@
            padding: 0.3rem 0.5rem;
        }
    }
-   
-   @media (max-width: 767px) {
-    .social-link {
-        width: 1.5rem;
-        height: 1.5rem;
-        font-size: 0.75rem;
-    }
 
-    .social-link svg {
-        width: 0.7rem !important;
-        height: 0.7rem !important;
-    }
-}
+   @media (max-width: 767px) {
+       .social-link {
+           width: 1.5rem;
+           height: 1.5rem;
+           font-size: 0.75rem;
+       }
+
+       .social-link svg {
+           width: 0.7rem !important;
+           height: 0.7rem !important;
+       }
+   }
+
    /* Mobile - Small Screens */
    @media (max-width: 700px) {
 
