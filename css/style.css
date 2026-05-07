@@ -200,32 +200,32 @@
 
    /* Hero Image Variants */
    .hero-home {
-       background-image: url('../images/YPL-088.jpg');
+       background-image: url('../images/YPL-088_compressed.webp');
        background-position: center 60%;
    }
 
    .hero-team {
-       background-image: url('../images/DSC_6100.jpg');
+       background-image: url('../images/DSC_6100.webp');
        background-position: center 20%;
    }
 
    .hero-whatwedo {
-       background-image: url('../images/YPL-090_3.jpg');
+       background-image: url('../images/YPL-090_3.webp');
        background-position: center 60%;
    }
 
    .hero-join {
-       background-image: url('../images/YPL-090_3.jpg');
+       background-image: url('../images/YPL-090_3.webp');
        background-position: center 85%;
    }
 
    .hero-support {
-       background-image: url('../images/YPL-088_2.jpg');
+       background-image: url('../images/YPL-088_2.webp');
        background-position: center 60%;
    }
 
    .hero-hire {
-       background-image: url('../images/Kitchen3h.jpg');
+       background-image: url('../images/Kitchen3h.webp');
        background-position: center 60%;
    }
 
@@ -236,7 +236,7 @@
    }
 
    .hero-stories {
-       background-image: url('../images/kitchen_stories.jpg');
+       background-image: url('../images/kitchen_stories.webp');
        background-size: cover;
        background-color: black;
    }
