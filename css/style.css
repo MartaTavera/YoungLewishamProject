@@ -423,6 +423,7 @@
        background: #f5f5f5;
        text-align: center;
        font-family: Arial, sans-serif;
+       font-size: 1rem;
    }
 
    /* =====================================================
@@ -927,9 +928,6 @@
    RESPONSIVE DESIGN
    ===================================================== */
 
-   /* Desktop - Large Screens */
-
-
    /* Tablet - Medium Screens */
    @media (max-width: 1270px) {
        .nav-links {
@@ -1021,8 +1019,6 @@
 
    /* Mobile - Small Screens */
    @media (max-width: 700px) {
-
-       /* Navbar Mobile */
        .burger-menu {
            display: flex;
        }
@@ -1204,4 +1200,57 @@
            padding: 6rem 2rem 0rem 2rem;
            /* reduce from 10rem to 6rem */
        }
-   }
+    }
+
+       /* Tablet */
+@media (max-width: 600px) {
+    .video-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .video-thumbnail {
+        grid-column: span 2;
+    }
+
+    .video-thumbnail:nth-child(4) {
+        grid-column: 2 / 4;
+    }
+
+    .video-thumbnail:nth-child(5) {
+        grid-column: 4 / 6;
+    }
+
+    .video-title {
+        font-size: 0.72rem;
+        padding: 6px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 580px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .video-thumbnail {
+        grid-column: span 1;
+    }
+
+    .video-thumbnail:nth-child(4) {
+        grid-column: span 1;
+    }
+
+    .video-thumbnail:nth-child(5) {
+        grid-column: span 1;
+    }
+
+    .video-title {
+        font-size: 0.72rem;
+        padding: 6px;
+    }
+}
+   
