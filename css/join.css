@@ -34,6 +34,12 @@
     text-decoration: underline;
     color: #333;
 }
+.event-and-text{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding-bottom: 30px;
+}
 /* Vacancies Box Specific Styles */
 .vacancies-box {
     display: flex;
