@@ -772,6 +772,17 @@
        background-color: #333 !important;
    }
 
+   .termdates-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+
+
    /* =====================================================
    FOOTER
    ===================================================== */
@@ -786,7 +797,7 @@
        margin: 0 auto;
        display: grid;
        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-       gap: 2rem;
+       gap: 1.5rem;
    }
 
    .footer-column h3 {
