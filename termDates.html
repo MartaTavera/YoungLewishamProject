@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/join.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/term-dates-calendar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -21,48 +22,64 @@
     </div>
 
     <main>
-        <div class="termdates-container">
+        <div class="visit-container">
 
-            <div class="visit-box">
-
-                <h2>Autumn term 2026</h2>
-                <p>
-                    <strong>INSET days:</strong> Wednesday 2 to Friday 4 September 2026<br>
-                    <strong>Autumn term 1:</strong>Monday 7 September 2026 to Friday 23 October 2026<br>
-                    <strong>Autumn half-term:</strong> Monday 26 to Friday 30 October 2026<br>
-                    <strong>Autumn Term 2:</strong> Monday 2 November to Friday 18 December 2026<br>
-                    <strong>Christmas holiday :</strong> Monday 21 December 2026 to Friday 1 January 2027
-                </p>
+            <div class="card">
+              <h3>Autumn term 2026</h3>
+              <p><b>INSET days:</b> Wednesday 2 to Friday 4 September 2026</p>
+              <p><b>Autumn term 1:</b> Monday 7 September 2026 to Friday 23 October 2026</p>
+              <p><b>Autumn half-term:</b> Monday 26 to Friday 30 October 2026</p>
+              <p><b>Autumn Term 2:</b> Monday 2 November to Friday 18 December 2026</p>
+              <p><b>Christmas holiday:</b> Monday 21 December 2026 to Friday 1 January 2027</p>
+              <div class="legend">
+                <span class="swatch"><span class="dot term"></span>Teaching</span>
+                <span class="swatch"><span class="dot inset"></span>INSET</span>
+                <span class="swatch"><span class="dot half"></span>Half-term</span>
+                <span class="swatch"><span class="dot holiday"></span>Holiday</span>
+              </div>
+              <div class="month-group" id="cal-autumn"></div>
             </div>
-            <div class="visit-box">
-                <h2>Spring term 2027</h2>
-                <p>
-                    <strong>INSET day:</strong> Monday 4 January<br>
-                    <strong>Spring Term 1: </strong>Tuesday 5 January 2027 to Friday 12 February 2027<br>
-                    <strong>Half-term :</strong> Monday 15 to Friday 19 February 2027<br>
-                    <strong>Spring Term 2:</strong> Monday 22 February to Thursday 25 March 2027<br>
-                    <strong>Easter holiday :</strong> Friday 26 March to Friday 9 April 2027<br>
-                </p>
+          
+            <div class="card">
+              <h3>Spring term 2027</h3>
+              <p><b>INSET day:</b> Monday 4 January</p>
+              <p><b>Spring Term 1:</b> Tuesday 5 January 2027 to Friday 12 February 2027</p>
+              <p><b>Half-term:</b> Monday 15 to Friday 19 February 2027</p>
+              <p><b>Spring Term 2:</b> Monday 22 February to Thursday 25 March 2027</p>
+              <p><b>Easter holiday:</b> Friday 26 March to Friday 9 April 2027</p>
+              <div class="legend">
+                <span class="swatch"><span class="dot term"></span>Teaching</span>
+                <span class="swatch"><span class="dot inset"></span>INSET</span>
+                <span class="swatch"><span class="dot half"></span>Half-term</span>
+                <span class="swatch"><span class="dot holiday"></span>Holiday</span>
+              </div>
+              <div class="month-group" id="cal-spring"></div>
             </div>
-            <div class="visit-box">
-                <h2>Summer term 2027</h2>
-                <p>
-                    <strong>INSET day:</strong> Monday 12 April 2027<br>
-                    <strong>Summer Term 1:</strong> Tuesday 13 April to Friday 28 May 2027 (Includes May Bank Holiday on Monday 3 May
-                    2027)<br>
-                    <strong>Half-term:</strong> Monday 31 May to Friday 4 June 2027<br>
-                    <strong>Summer Term 2: </strong>Monday 7 June to Thursday 22 July 2027 ( Last day of the academic year)<br>
-                </p>
+          
+            <div class="card">
+              <h3>Summer term 2027</h3>
+              <p><b>INSET day:</b> Monday 12 April 2027</p>
+              <p><b>Summer Term 1:</b> Tuesday 13 April to Friday 28 May 2027 (Includes May Bank Holiday on Monday 3 May 2027)</p>
+              <p><b>Half-term:</b> Monday 31 May to Friday 4 June 2027</p>
+              <p><b>Summer Term 2:</b> Monday 7 June to Thursday 22 July 2027 (Last day of the academic year)</p>
+              <div class="legend">
+                <span class="swatch"><span class="dot term"></span>Teaching</span>
+                <span class="swatch"><span class="dot inset"></span>INSET</span>
+                <span class="swatch"><span class="dot half"></span>Half-term</span>
+                <span class="swatch"><span class="dot holiday"></span>Holiday</span>
+                <span class="swatch"><span class="dot bank"></span>Bank hol.</span>
+              </div>
+              <div class="month-group" id="cal-summer"></div>
             </div>
-
-        </div>
-    </main>
+          
+          </div>
 
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
     <!-- Load components -->
     <script src="js/components.js"></script>
+    <script src="js/term-dates-calendar.js"></script>
 </body>
 
 </html>
